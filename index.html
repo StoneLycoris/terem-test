@@ -28,7 +28,7 @@
             <div class="colorful__block col-xl-4 col-md-12">
                 <div class="colorful__inner colorful__inner-first"></div>
             </div>
-            <div class="colorful__block col-xl-4 col-md-12">
+            <div class="colorful__block colorful__block-second col-xl-4 col-md-12">
                 <div class="colorful__inner colorful__inner-dashed"></div>
             </div>
             <div class="colorful__block col-xl-4 col-md-12">
@@ -39,23 +39,40 @@
         <div class="row justify-content-between control">
             <div class="control__block col-xl-4 col-md-12">
                 <div class="control__inner">
-                    <button type="button" class="control__block_btn btn-lg btn-warning">Кнопка 1</button>
+                    <button id="hideBlock" type="button" class="control__block_btn btn-lg btn-warning">Кнопка 1</button>
                 </div>
             </div>
 
             <div class="control__block col-xl-8 col-md-12">
                 <div class="control__inner">
-                    <button type="button" class="control__block_btn btn-lg btn-success">Кнопка 2</button>
+                    <button id="changeOrder" type="button" class="control__block_btn btn-lg btn-success">Кнопка
+                        2</button>
                 </div>
             </div>
         </div>
 
 
         <a class="link" href="#">На страницу с формами</a>
+
+        <!--Модальное окно-->
+
+        <div class="popup" data-modal>
+            <div class="popup__dialog">
+                <div class="popup__content text-center">
+                    <button role="button" type="button" class="popup__close"><strong>&times;</strong></button>
+                    <div class="popup__inner">Привет, мир!</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="./modules/buttons.js"></script>
+    <script src="./modules/modal.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
