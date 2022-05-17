@@ -16,24 +16,42 @@
 </head>
 
 <body>
+    <div class="container-fluid">
 
-    <div class="titled col-lg-12">
-        <h1 class="title">Этот чудесный блок.</h1>
-    </div>
-
-    <div class="colorful">
-        <div class="colorful__block col-lg-4 col-md-12"></div>
-        <div class="colorful__block colorful__block-dotted col-lg-4 col-md-12"></div>
-        <div class="colorful__block col-lg-4 col-md-12"></div>
-    </div>
-
-    <div class="control">
-        <div class="control__btn col-lg-4 col-md-12">
-            <button type="button" class="btn btn-warning">Кнопка 1</button>
+        <div class="row">
+            <div class="titled col-xl-12">
+                <h1 class="title">Этот чудесный блок</h1>
+            </div>
         </div>
-        <div class="control__btn col-lg-8 col-md-12">
-            <button type="button" class="btn btn-success">Кнопка 2</button>
+
+        <div class="row colorful">
+            <div class="colorful__block col-xl-4 col-md-12">
+                <div class="colorful__inner colorful__inner-first"></div>
+            </div>
+            <div class="colorful__block col-xl-4 col-md-12">
+                <div class="colorful__inner colorful__inner-dashed"></div>
+            </div>
+            <div class="colorful__block col-xl-4 col-md-12">
+                <div class="colorful__inner colorful__inner-last"></div>
+            </div>
         </div>
+
+        <div class="row justify-content-between control">
+            <div class="control__block col-xl-4 col-md-12">
+                <div class="control__inner">
+                    <button type="button" class="control__block_btn btn-lg btn-warning">Кнопка 1</button>
+                </div>
+            </div>
+
+            <div class="control__block col-xl-8 col-md-12">
+                <div class="control__inner">
+                    <button type="button" class="control__block_btn btn-lg btn-success">Кнопка 2</button>
+                </div>
+            </div>
+        </div>
+
+
+        <a class="link" href="#">На страницу с формами</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
