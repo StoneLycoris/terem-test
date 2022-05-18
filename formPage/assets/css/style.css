@@ -71,11 +71,13 @@ label:not(:last-child) {
 	font-size: 25px;
 }
 
-.status {
-	display: block;
-	background-color: #a42b2c;
-	padding: 20px;
-	color: ghostwhite;
+.data {
+	border: 2px solid #000;
+	background-color: rgb(196, 245, 238);
+	color: rgb(0, 0, 3);
+	padding: 40px;
+	margin-top: 40px;
+	text-align: center;
 }
 
 .link {
