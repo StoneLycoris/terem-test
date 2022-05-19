@@ -14,7 +14,7 @@ const forms = () => {
 	const getData = async (url) => {
 		await fetch(url)
 			.then((response) => {
-				console.log("response", response);
+				
 				if (response.ok) {
 					alert("Данные успешно отправлены");
 				}
