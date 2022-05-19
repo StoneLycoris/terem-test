@@ -56,7 +56,7 @@ label:not(:last-child) {
 }
 
 .form-inputs__label-name {
-	margin-right: 35px;
+	margin-right: 40px;
 }
 
 .form-inputs__input {
@@ -78,6 +78,7 @@ label:not(:last-child) {
 	padding: 40px;
 	margin-top: 40px;
 	text-align: center;
+	overflow-wrap: break-word;
 }
 
 .link {

@@ -1,20 +1,10 @@
-const maskedPhone = () => {
-	const element = document.querySelector(".plugin__input_imaskjs");
-	let phoneMask = IMask(element, {
-		mask: "+{7} (000) 000-00-00",
-		lazy: false,
-		placeholderChar: "_",
-	});
-	phoneMask.updateValue();
-};
-
 const forms = () => {
 	const form = document.querySelector(".form"),
 		selects = document.querySelectorAll(".form-control"),
 		inputs = document.querySelectorAll(".form-inputs__input"),
 		formWrapper = document.querySelector(".form-wrapper");
 
-	console.log(inputs);
+	selects[0].focus();
 
 	const clearInputs = () => {
 		inputs.forEach((input) => (input.value = ""));
@@ -22,9 +12,7 @@ const forms = () => {
 	};
 
 	const postData = async (url) => {
-		const result = await fetch(url, {
-			method: "GET",
-		});
+		const result = await fetch(url);
 
 		return await result.text();
 	};
@@ -33,22 +21,37 @@ const forms = () => {
 		const dataElement = document.createElement("div");
 		dataElement.classList.add("data");
 		dataElement.textContent = jsonData;
-		dataElement.before(formWrapper, dataElement);
+		formWrapper.querySelector("form").append(dataElement);
 	};
 
 	form.addEventListener("submit", (e) => {
 		e.preventDefault();
-		const formData = new FormData(form);
-		console.log(formData);
-		const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
-		console.log(jsonData);
-		console.log(showData());
+		const jsonData = JSON.stringify(
+			{
+				selectFirst: document.querySelector('select[name="numbers-1"]')
+					.value,
+				selectSecond: document.querySelector('select[name="numbers-2"]')
+					.value,
+				selectThird: document.querySelector('select[name="numbers-3"]')
+					.value,
+				selectFourth: document.querySelector('select[name="numbers-4"]')
+					.value,
+				selectFifth: document.querySelector('select[name="numbers-5"]')
+					.value,
+				name: document.querySelector('input[name="name"]').value,
+				last_name: document.querySelector('input[name="last-name"]')
+					.value,
+			},
+			null,
+			"  "
+		);
+
+		showData(jsonData);
 
 		postData("./dummyServer.js", jsonData)
 			.then((response) => {
 				if (response.ok) {
 					alert("Данные успешно отправлены");
-					showData(json);
 				}
 			})
 			.catch((error) => {

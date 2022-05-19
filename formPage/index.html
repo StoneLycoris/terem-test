@@ -72,11 +72,11 @@
 
                 <div class="form-inputs">
                     <label class="form-inputs__label form-inputs__label-name" for="name">Имя:</label>
-                    <input class="form-inputs__input" id="name" type="text" autocomplete="name" required>
+                    <input class="form-inputs__input" id="name" name="name" type="text" autocomplete="name" required>
 
-                    <label class="form-inputs__label" for="phone">Телефон:</label>
-                    <input class="form-inputs__input plugin__input_imaskjs" id="phone" type="text" autocomplete="tel"
-                        required>
+                    <label class="form-inputs__label" for="last-name">Фамилия:</label>
+                    <input class="form-inputs__input" name="last-name" id="last-name" type="text"
+                        autocomplete="family-name" required>
                 </div>
 
                 <button name="submit" value="Отправить форму" role="button" type="submit"
@@ -93,7 +93,6 @@
 
     </div>
 
-    <script src="https://unpkg.com/imask"></script>
     <script src="./modules/form.js"></script>
     <script src="script.js"></script>
 </body>
