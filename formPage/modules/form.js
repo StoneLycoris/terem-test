@@ -5,6 +5,13 @@ const forms = () => {
 		formWrapper = document.querySelector(".form-wrapper");
 
 	selects[0].focus();
+	
+	inputs.forEach((input) => {
+		input.addEventListener("input", () => {
+			input.value = input.value.replace(/\d/, "");
+			alert("Цифры вводить нельзя.");
+		});
+	});
 
 	const clearInputs = () => {
 		inputs.forEach((input) => (input.value = ""));
