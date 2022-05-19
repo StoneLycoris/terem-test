@@ -8,8 +8,7 @@ const forms = () => {
 	
 	inputs.forEach((input) => {
 		input.addEventListener("input", () => {
-			input.value = input.value.replace(/\d/, "");
-			alert("Цифры вводить нельзя.");
+			input.value = input.value.replace(/\d/, "") && alert("Цифры вводить нельзя.");
 		});
 	});
 
