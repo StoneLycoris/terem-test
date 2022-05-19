@@ -182,6 +182,10 @@
 	.link {
 		margin-bottom: 40px;
 	}
+
+	.popup__content {
+		width: 38rem;
+	}
 }
 
 @media (max-width: 768px) {
@@ -196,6 +200,10 @@
 	.control__block {
 		margin-bottom: 40px;
 	}
+
+	.popup__content {
+		width: 35rem;
+	}
 }
 
 @media (max-width: 576px) {
@@ -209,5 +217,17 @@
 
 	.control__block {
 		margin-bottom: 35px;
+	}
+
+	.popup__content {
+		width: 15rem;
+	}
+
+	.popup__close {
+		right: -4rem;
+	}
+
+	.popup__inner {
+		font-size: 35px;
 	}
 }

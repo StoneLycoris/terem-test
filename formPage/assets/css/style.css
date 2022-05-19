@@ -63,6 +63,10 @@ label:not(:last-child) {
 	border-radius: 5px;
 }
 
+.form-inputs__input:focus {
+	box-shadow: 2px 2px rgb(93, 150, 255);
+}
+
 .form-btn {
 	margin: 0 auto;
 	margin-top: 40px;
@@ -109,4 +113,38 @@ label:not(:last-child) {
 	outline: rgb(140, 2, 253);
 	box-shadow: 2px 2px 2px rgb(140, 2, 253);
 	color: rgb(243, 243, 253);
+}
+
+@media (max-width: 992px) {
+	.form-wrapper {
+		width: auto;
+	}
+
+	.form {
+		width: 60%;
+	}
+
+	.form-inputs {
+		width: auto;
+	}
+}
+
+@media (max-width: 575px) {
+	.title {
+		font-size: 35px;
+	}
+
+	.form {
+		width: auto;
+	}
+}
+
+@media (max-width: 392px) {
+	.form-inputs__label-name {
+		margin-right: 38px;
+	}
+
+	.link {
+		width: 250px;
+	}
 }

@@ -11,10 +11,21 @@ const forms = () => {
 		selects.forEach((select) => select.defaultSelected);
 	};
 
-	const postData = async (url) => {
-		const result = await fetch(url);
-
-		return await result.text();
+	const getData = async (url) => {
+		await fetch(url)
+			.then((response) => {
+				console.log("response", response);
+				if (response.ok) {
+					alert("Данные успешно отправлены");
+				}
+			})
+			.catch((error) => {
+				console.log(error);
+				alert("Произошла ошибка!");
+			})
+			.finally(() => {
+				clearInputs();
+			});
 	};
 
 	const showData = (jsonData) => {
@@ -48,18 +59,6 @@ const forms = () => {
 
 		showData(jsonData);
 
-		postData("./dummyServer.js", jsonData)
-			.then((response) => {
-				if (response.ok) {
-					alert("Данные успешно отправлены");
-				}
-			})
-			.catch((error) => {
-				console.log(error);
-				alert("Произошла ошибка!");
-			})
-			.finally(() => {
-				clearInputs();
-			});
+		getData("./dummyServer.js");
 	});
 };
